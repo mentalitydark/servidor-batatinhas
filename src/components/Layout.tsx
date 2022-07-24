@@ -1,5 +1,6 @@
 interface LayoutProps {
     children: any;
+    className?: string;
 }
 
 export default function Layout(props: LayoutProps) {
@@ -7,8 +8,8 @@ export default function Layout(props: LayoutProps) {
         <main className="flex justify-center items-center h-screen">
             <div className={`
                 flex flex-col justify-center items-center
-                h-1/2 w-1/2 bg-neutral-800/75 rounded-lg
-                border border-white border-solid
+                h-min w-1/2 bg-neutral-800/75 rounded-lg
+                ${props.className}
             `}>
                 {props.children}
             </div>
